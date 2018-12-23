@@ -22,6 +22,9 @@ def mail():
     if answer == '5':
         message = f'Сообщение от {email} | Телефон: {tel} | Текст сообщение: {body}'
         send_mail(to_email=email, message=message)
+        return 'OK'
+    else:
+        return 'ERR'
 
 
 if __name__ == '__main__':
