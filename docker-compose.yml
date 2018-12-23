@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  mail:
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: phc_notificator
+    env_file:
+      - .env
+    ports:
+      - "5441:5441"
